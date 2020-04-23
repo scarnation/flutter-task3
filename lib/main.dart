@@ -55,7 +55,15 @@ class _MyListScreenState extends State {
           itemCount: users.length,
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text(users[index].name),
+              title:Row(
+                children: <Widget>[
+                  Icon(Icons.person),
+                  SizedBox(width: 20,),
+                  Text(users[index].name),
+                  SizedBox(width: 20,),
+                  Text( users[index].email),
+                ],
+              ),
               // When a user taps the ListTile, navigate to the DetailScreen.
               // Notice that you're not only creating a DetailScreen, you're
               // also passing the current users to it.
@@ -94,6 +102,9 @@ class DetailScreen extends StatelessWidget {
           children: <Widget>[
             Text(users.name),
             Text(users.email),
+            Text(users.username),
+            Text(users.phone),
+
 
           ],
         )
