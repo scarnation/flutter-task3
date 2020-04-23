@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   build(context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'My Http App',
+      title: 'My List App',
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
